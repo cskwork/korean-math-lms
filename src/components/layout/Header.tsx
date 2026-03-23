@@ -23,8 +23,6 @@ interface HeaderProps {
   userLevel?: number;
   /** 총 경험치 */
   userXp?: number;
-  /** 사용자 아바타 이모지 */
-  userAvatar?: string;
 }
 
 const NAV_LINKS = [
@@ -39,8 +37,8 @@ export function Header({
   userName = '학생',
   userLevel = 1,
   userXp = 0,
-  userAvatar = '🎓',
 }: HeaderProps) {
+  const initials = userName.slice(0, 1);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -69,7 +67,7 @@ export function Header({
           className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
           aria-label="수학의 달인 홈으로 이동"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-sm">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 shadow-sm">
             <GraduationCap className="h-5 w-5 text-white" aria-hidden="true" />
           </div>
           <span className="text-lg font-bold tracking-tight text-gray-900">
@@ -83,7 +81,7 @@ export function Header({
             <Link
               key={href}
               href={href}
-              className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-all hover:bg-gray-50 hover:text-primary-600"
+              className="flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium text-gray-600 transition-all duration-200 ease-premium hover:bg-primary-50 hover:text-primary-700"
             >
               <Icon className="h-4 w-4" aria-hidden="true" />
               {label}
@@ -100,20 +98,19 @@ export function Header({
           </div>
 
           {/* 레벨 배지 */}
-          <div className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
+          <div className="rounded-full bg-primary-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
             Lv.{userLevel}
           </div>
 
           {/* 아바타 */}
           <div className="flex items-center gap-2">
             <div className="relative">
-              {/* 아바타 링 배경 */}
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 opacity-75" aria-hidden="true" />
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 opacity-75" aria-hidden="true" />
               <span
-                className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white text-lg"
+                className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-bold text-primary-700"
                 aria-hidden="true"
               >
-                {userAvatar}
+                {initials}
               </span>
             </div>
             <div className="text-sm leading-tight">
@@ -160,17 +157,17 @@ export function Header({
       >
         <div className="flex flex-col gap-1 p-4">
           {/* 모바일 사용자 정보 */}
-          <div className="mb-4 flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 p-4">
+          <div className="mb-4 flex items-center gap-3 rounded-xl bg-gradient-to-r from-primary-50 to-primary-100/50 p-4">
             <div className="relative">
-              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 opacity-75" aria-hidden="true" />
-              <span className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl">
-                {userAvatar}
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 opacity-75" aria-hidden="true" />
+              <span className="relative flex h-11 w-11 items-center justify-center rounded-full bg-white text-base font-bold text-primary-700">
+                {initials}
               </span>
             </div>
             <div>
               <p className="text-sm font-semibold text-gray-900">{userName}</p>
               <div className="mt-0.5 flex items-center gap-2">
-                <span className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-2 py-0.5 text-[10px] font-bold text-white">
+                <span className="rounded-full bg-primary-600 px-2 py-0.5 text-[10px] font-bold text-white">
                   Lv.{userLevel}
                 </span>
                 <span className="flex items-center gap-0.5 text-xs font-medium text-amber-600">
@@ -186,7 +183,7 @@ export function Header({
             <Link
               key={href}
               href={href}
-              className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-gray-600 transition-all hover:bg-blue-50 hover:text-primary-600"
+              className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-gray-600 transition-all duration-200 ease-premium hover:bg-primary-50 hover:text-primary-700"
               onClick={() => setMobileOpen(false)}
             >
               <Icon className="h-5 w-5" aria-hidden="true" />

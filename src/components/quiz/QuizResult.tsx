@@ -200,9 +200,9 @@ export function QuizResult({
               label="정답"
               value={`${score}/${total}`}
               icon={<CheckCircle2 className="h-4 w-4" aria-hidden="true" />}
-              bgColor="bg-blue-50"
-              textColor="text-blue-700"
-              iconColor="text-blue-500"
+              bgColor="bg-primary-50"
+              textColor="text-primary-700"
+              iconColor="text-primary-500"
             />
             <StatCard
               label="정답률"
@@ -210,9 +210,9 @@ export function QuizResult({
               icon={
                 <span className="text-sm font-bold" aria-hidden="true">%</span>
               }
-              bgColor="bg-purple-50"
-              textColor="text-purple-700"
-              iconColor="text-purple-500"
+              bgColor="bg-rose-50"
+              textColor="text-rose-700"
+              iconColor="text-rose-500"
             />
             <StatCard
               label="획득 XP"
@@ -270,7 +270,7 @@ export function QuizResult({
               size="lg"
               className={cn(
                 'flex-1 gap-2 rounded-xl',
-                passed && 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700',
+                passed && 'bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800',
               )}
             >
               다음 수업
@@ -311,8 +311,8 @@ function StatCard({ label, value, icon, bgColor, textColor, iconColor }: StatCar
    CSS 전용 컨페티 파티클 (색상 div)
    ---------------------------------------- */
 const CONFETTI_COLORS = [
-  '#3b82f6', '#ef4444', '#22c55e', '#f59e0b',
-  '#8b5cf6', '#ec4899', '#06b6d4', '#f97316',
+  '#059669', '#ef4444', '#22c55e', '#f59e0b',
+  '#34d399', '#ec4899', '#06b6d4', '#f97316',
 ];
 
 function ConfettiParticles() {

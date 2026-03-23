@@ -9,8 +9,8 @@ const badgeVariants = cva(
     variants: {
       variant: {
         beginner: 'bg-green-50 text-green-700 ring-1 ring-inset ring-green-600/20',
-        intermediate: 'bg-blue-50 text-blue-700 ring-1 ring-inset ring-blue-600/20',
-        advanced: 'bg-purple-50 text-purple-700 ring-1 ring-inset ring-purple-600/20',
+        intermediate: 'bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-600/20',
+        advanced: 'bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-600/20',
         easy: 'bg-green-50 text-green-700 ring-1 ring-inset ring-green-600/20',
         medium: 'bg-yellow-50 text-yellow-700 ring-1 ring-inset ring-yellow-600/20',
         hard: 'bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20',

@@ -229,14 +229,14 @@ function VisualSection({ section }: { section: LessonSection }) {
 
   // 매칭되지 않는 경우: 수학 기호와 그라데이션 배경의 스타일 플레이스홀더
   return (
-    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-6">
+    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-50 via-primary-100/50 to-primary-50 p-6">
       {/* 장식용 수학 기호 */}
       <div className="pointer-events-none absolute inset-0 select-none opacity-[0.07]" aria-hidden="true">
-        <span className="absolute left-[8%] top-[12%] text-5xl font-bold text-blue-900">+</span>
-        <span className="absolute right-[12%] top-[8%] text-4xl font-bold text-indigo-900">{'\u03C0'}</span>
-        <span className="absolute bottom-[14%] left-[16%] text-4xl font-bold text-purple-900">{'\u221A'}</span>
-        <span className="absolute bottom-[10%] right-[18%] text-5xl font-bold text-blue-900">{'\u00D7'}</span>
-        <span className="absolute left-[45%] top-[50%] text-6xl font-bold text-indigo-900">{'\u03A3'}</span>
+        <span className="absolute left-[8%] top-[12%] text-5xl font-bold text-primary-900">+</span>
+        <span className="absolute right-[12%] top-[8%] text-4xl font-bold text-primary-800">{'\u03C0'}</span>
+        <span className="absolute bottom-[14%] left-[16%] text-4xl font-bold text-primary-700">{'\u221A'}</span>
+        <span className="absolute bottom-[10%] right-[18%] text-5xl font-bold text-primary-900">{'\u00D7'}</span>
+        <span className="absolute left-[45%] top-[50%] text-6xl font-bold text-primary-800">{'\u03A3'}</span>
       </div>
 
       <div className="relative text-center">
@@ -253,8 +253,8 @@ function VisualSection({ section }: { section: LessonSection }) {
 
 function InteractiveSection({ section }: { section: LessonSection }) {
   return (
-    <div className="rounded-xl border border-indigo-200 bg-indigo-50/40 p-5">
-      <h3 className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-indigo-700">
+    <div className="rounded-xl border border-primary-200 bg-primary-50/40 p-5">
+      <h3 className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-primary-700">
         <Sparkles className="h-4 w-4" aria-hidden="true" />
         {section.title ?? '인터랙티브 콘텐츠'}
       </h3>

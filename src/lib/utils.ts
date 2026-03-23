@@ -32,8 +32,8 @@ export function getDifficultyColor(difficulty: string): string {
     medium: 'text-yellow-600 bg-yellow-50',
     hard: 'text-red-600 bg-red-50',
     beginner: 'text-green-600 bg-green-50',
-    intermediate: 'text-blue-600 bg-blue-50',
-    advanced: 'text-purple-600 bg-purple-50',
+    intermediate: 'text-amber-600 bg-amber-50',
+    advanced: 'text-rose-600 bg-rose-50',
   };
   return colors[difficulty] || 'text-gray-600 bg-gray-50';
 }

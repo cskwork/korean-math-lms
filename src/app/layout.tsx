@@ -1,15 +1,7 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_KR } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import './globals.css';
-
-const notoSansKR = Noto_Sans_KR({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  variable: '--font-noto-sans-kr',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: '수학의 달인 - 중학교 수학 학습 플랫폼',
@@ -27,13 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={notoSansKR.variable}>
+    <html lang="ko">
+      <head>
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+        />
+      </head>
       <body className="flex min-h-screen flex-col font-sans antialiased">
         <Header
           userName="김수학"
           userLevel={7}
           userXp={2450}
-          userAvatar="🎓"
         />
 
         <main className="flex-1 px-4 py-6 sm:px-6 lg:px-8">

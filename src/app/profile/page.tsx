@@ -18,10 +18,10 @@ const statsItems = [
     label: '레벨',
     value: `Lv.${mockUser.level}`,
     icon: TrendingUp,
-    bgColor: 'bg-blue-50',
-    iconColor: 'text-blue-500',
-    valueColor: 'text-blue-700',
-    ringColor: 'ring-blue-200',
+    bgColor: 'bg-primary-50',
+    iconColor: 'text-primary-500',
+    valueColor: 'text-primary-700',
+    ringColor: 'ring-primary-200',
   },
   {
     label: '총 경험치',
@@ -54,10 +54,10 @@ const statsItems = [
     label: '퀴즈 평균',
     value: `${dashboardStats.averageScore}점`,
     icon: Target,
-    bgColor: 'bg-purple-50',
-    iconColor: 'text-purple-500',
-    valueColor: 'text-purple-700',
-    ringColor: 'ring-purple-200',
+    bgColor: 'bg-rose-50',
+    iconColor: 'text-rose-500',
+    valueColor: 'text-rose-700',
+    ringColor: 'ring-rose-200',
   },
   {
     label: '획득 배지',
@@ -74,15 +74,15 @@ const statsItems = [
 function getActivityStyle(type: string): { icon: string; dotColor: string } {
   switch (type) {
     case 'lesson_complete':
-      return { icon: '📖', dotColor: 'bg-blue-400' };
+      return { icon: '\u2713', dotColor: 'bg-primary-400' };
     case 'quiz_complete':
-      return { icon: '✅', dotColor: 'bg-green-400' };
+      return { icon: '\u2605', dotColor: 'bg-green-400' };
     case 'badge_earned':
-      return { icon: '🏅', dotColor: 'bg-amber-400' };
+      return { icon: '\u25C6', dotColor: 'bg-amber-400' };
     case 'streak':
-      return { icon: '🔥', dotColor: 'bg-orange-400' };
+      return { icon: '\u2736', dotColor: 'bg-orange-400' };
     default:
-      return { icon: '📌', dotColor: 'bg-gray-400' };
+      return { icon: '\u2022', dotColor: 'bg-gray-400' };
   }
 }
 
@@ -98,7 +98,7 @@ export default function ProfilePage() {
       {/* ====== 프로필 카드 ====== */}
       <section className="overflow-hidden rounded-2xl bg-white shadow-md">
         {/* 그래디언트 배경 헤더 */}
-        <div className="relative bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 px-6 pb-20 pt-8">
+        <div className="relative bg-gradient-to-r from-primary-500 to-primary-700 px-6 pb-20 pt-8">
           <div className="dot-pattern absolute inset-0" />
           <h1 className="relative text-xl font-bold text-white sm:text-2xl">
             내 프로필
@@ -114,7 +114,7 @@ export default function ProfilePage() {
                 className="animate-gradient-ring absolute inset-0 rounded-full"
                 style={{
                   background:
-                    'conic-gradient(from 0deg, #3b82f6, #8b5cf6, #06b6d4, #f59e0b, #3b82f6)',
+                    'conic-gradient(from 0deg, #059669, #34d399, #6ee7b7, #f59e0b, #059669)',
                   padding: '4px',
                   width: '108px',
                   height: '108px',
@@ -127,7 +127,7 @@ export default function ProfilePage() {
                 }}
                 aria-hidden="true"
               />
-              <div className="relative flex h-[100px] w-[100px] items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-blue-50 to-indigo-50 text-5xl shadow-lg">
+              <div className="relative flex h-[100px] w-[100px] items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-primary-50 to-primary-100/50 text-5xl shadow-lg">
                 {mockUser.avatar}
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function ProfilePage() {
                 중학교 {mockUser.grade}학년
               </p>
               {/* 레벨 배지 */}
-              <span className="mt-1.5 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
+              <span className="mt-1.5 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary-500 to-primary-700 px-3 py-1 text-xs font-bold text-white shadow-sm">
                 <Star className="h-3 w-3" aria-hidden="true" />
                 레벨 {mockUser.level}
               </span>
@@ -159,7 +159,7 @@ export default function ProfilePage() {
             </div>
             <div className="relative h-4 overflow-hidden rounded-full bg-gray-200">
               <div
-                className="animate-progress h-full rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500"
+                className="animate-progress h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-700"
                 style={
                   { '--progress-width': `${xpProgress}%` } as React.CSSProperties
                 }
@@ -303,7 +303,7 @@ export default function ProfilePage() {
         <div className="relative">
           {/* 타임라인 수직 라인 */}
           <div
-            className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-300 via-indigo-200 to-transparent"
+            className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-300 via-primary-200 to-transparent"
             aria-hidden="true"
           />
 

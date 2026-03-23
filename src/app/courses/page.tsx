@@ -26,11 +26,11 @@ export default function CoursesPage() {
       <div className="rounded-xl bg-white p-5 shadow-sm">
         <div className="mb-2 flex items-center justify-between text-sm">
           <span className="font-medium text-gray-700">전체 학습 진행률</span>
-          <span className="font-bold text-blue-600">{overallProgress}%</span>
+          <span className="font-bold text-primary-600">{overallProgress}%</span>
         </div>
         <div className="h-3 overflow-hidden rounded-full bg-gray-100">
           <div
-            className="animate-progress h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500"
+            className="animate-progress h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-600"
             style={
               { '--progress-width': `${overallProgress}%` } as React.CSSProperties
             }

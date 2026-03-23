@@ -47,13 +47,13 @@ export default function DashboardPage() {
         <div className="flex items-center gap-4">
           {/* 아바타 + 애니메이션 링 */}
           <div className="relative flex-shrink-0">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 opacity-75 blur-[2px]" aria-hidden="true" />
-            <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 opacity-80" aria-hidden="true" />
-            <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white text-3xl shadow-sm">
-              {mockUser.avatar}
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 opacity-75 blur-[2px]" aria-hidden="true" />
+            <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 opacity-80" aria-hidden="true" />
+            <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white text-xl font-bold text-primary-700 shadow-sm">
+              {mockUser.name.slice(0, 2)}
             </span>
             {/* 레벨 배지 */}
-            <span className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-[10px] font-bold text-white shadow-md ring-2 ring-white">
+            <span className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-primary-500 to-primary-600 text-[10px] font-bold text-white shadow-md ring-2 ring-white">
               {mockUser.level}
             </span>
           </div>
@@ -76,27 +76,27 @@ export default function DashboardPage() {
         </div>
 
         {/* 오른쪽: 오늘의 목표 카드 */}
-        <div className="w-full flex-shrink-0 rounded-2xl border border-blue-100/60 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-5 shadow-sm lg:w-72">
+        <div className="w-full flex-shrink-0 rounded-2xl border border-primary-100/60 bg-gradient-to-br from-primary-50 via-white to-primary-50 p-5 shadow-sm lg:w-72">
           <div className="mb-3 flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-primary-600">
               <Target className="h-4 w-4 text-white" aria-hidden="true" />
             </div>
             <h3 className="text-sm font-bold text-gray-900">오늘의 목표</h3>
           </div>
           <div className="mb-2 flex items-end justify-between">
             <div className="flex items-baseline gap-1">
-              <span className="text-2xl font-bold text-blue-600">{todayXp}</span>
+              <span className="text-2xl font-bold text-primary-600">{todayXp}</span>
               <span className="text-sm text-gray-400">/ {dailyXpTarget} XP</span>
             </div>
-            <span className="flex items-center gap-0.5 text-xs font-medium text-blue-500">
+            <span className="flex items-center gap-0.5 text-xs font-medium text-primary-500">
               <Zap className="h-3.5 w-3.5" aria-hidden="true" />
               {dailyProgress}%
             </span>
           </div>
           {/* 미니 프로그레스 바 */}
-          <div className="h-2.5 w-full overflow-hidden rounded-full bg-blue-100/60">
+          <div className="h-2.5 w-full overflow-hidden rounded-full bg-primary-100/60">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 transition-all duration-700"
+              className="h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-500 transition-all duration-700"
               style={{ width: `${dailyProgress}%` }}
             >
               <div className="progress-shimmer h-full w-full rounded-full" />
@@ -135,7 +135,7 @@ export default function DashboardPage() {
                 href={`/courses/${item.courseId}/lessons/${item.lessonId}`}
                 className="card-hover group flex items-center gap-4 rounded-2xl border border-gray-100/60 bg-white p-5 shadow-sm transition-all"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 text-2xl shadow-sm transition-transform group-hover:scale-105">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-50 to-primary-50 text-2xl shadow-sm transition-transform group-hover:scale-105">
                   {item.courseIcon}
                 </span>
                 <div className="min-w-0 flex-1">
@@ -144,9 +144,9 @@ export default function DashboardPage() {
                     {item.lessonTitle}
                   </p>
                 </div>
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50 transition-colors group-hover:bg-blue-100">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-50 transition-colors group-hover:bg-primary-100">
                   <ArrowRight
-                    className="h-4 w-4 text-blue-500 transition-transform group-hover:translate-x-0.5"
+                    className="h-4 w-4 text-primary-500 transition-transform group-hover:translate-x-0.5"
                     aria-hidden="true"
                   />
                 </div>

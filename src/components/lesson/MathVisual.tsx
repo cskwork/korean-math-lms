@@ -122,12 +122,12 @@ function NumberLineSvg() {
               y1={y - 8}
               x2={x}
               y2={y + 8}
-              stroke={isZero ? '#3b82f6' : '#374151'}
+              stroke={isZero ? '#059669' : '#374151'}
               strokeWidth={isZero ? 2.5 : 1.5}
             />
             {isZero ? (
               <>
-                <circle cx={x} cy={y} r={12} fill="#3b82f6" />
+                <circle cx={x} cy={y} r={12} fill="#059669" />
                 <text
                   x={x}
                   y={y + 4.5}
@@ -171,7 +171,7 @@ function NumberLineSvg() {
         y={y - 30}
         textAnchor="middle"
         fontSize={13}
-        fill="#3b82f6"
+        fill="#059669"
         fontWeight={600}
       >
         양수
@@ -313,18 +313,18 @@ function CoordinatePlaneSvg() {
       </text>
 
       {/* 사분면 라벨 */}
-      <text x={ox + 2.5 * unit} y={oy - 2.8 * unit} textAnchor="middle" fontSize={16} fill="#93c5fd" fontWeight={700}>I</text>
+      <text x={ox + 2.5 * unit} y={oy - 2.8 * unit} textAnchor="middle" fontSize={16} fill="#6ee7b7" fontWeight={700}>I</text>
       <text x={ox - 2.5 * unit} y={oy - 2.8 * unit} textAnchor="middle" fontSize={16} fill="#fca5a5" fontWeight={700}>II</text>
       <text x={ox - 2.5 * unit} y={oy + 3.2 * unit} textAnchor="middle" fontSize={16} fill="#d9f99d" fontWeight={700}>III</text>
       <text x={ox + 2.5 * unit} y={oy + 3.2 * unit} textAnchor="middle" fontSize={16} fill="#fdba74" fontWeight={700}>IV</text>
 
       {/* 점 (3,2) 투영 점선 */}
-      <line x1={px} y1={py} x2={px} y2={oy} stroke="#3b82f6" strokeWidth={1} strokeDasharray="4 3" />
-      <line x1={px} y1={py} x2={ox} y2={py} stroke="#3b82f6" strokeWidth={1} strokeDasharray="4 3" />
+      <line x1={px} y1={py} x2={px} y2={oy} stroke="#059669" strokeWidth={1} strokeDasharray="4 3" />
+      <line x1={px} y1={py} x2={ox} y2={py} stroke="#059669" strokeWidth={1} strokeDasharray="4 3" />
 
       {/* 점 (3,2) */}
-      <circle cx={px} cy={py} r={5} fill="#3b82f6" />
-      <text x={px + 10} y={py - 8} fontSize={12} fontWeight={600} fill="#3b82f6">
+      <circle cx={px} cy={py} r={5} fill="#059669" />
+      <text x={px + 10} y={py - 8} fontSize={12} fontWeight={600} fill="#059669">
         (3, 2)
       </text>
     </svg>
@@ -354,7 +354,7 @@ function TriangleSvg() {
       <polygon
         points={`${A.x},${A.y} ${B.x},${B.y} ${C.x},${C.y}`}
         fill="#eff6ff"
-        stroke="#3b82f6"
+        stroke="#059669"
         strokeWidth={2}
         strokeLinejoin="round"
       />
@@ -401,9 +401,9 @@ function TriangleSvg() {
       />
 
       {/* 꼭짓점 라벨 */}
-      <text x={A.x} y={A.y - 10} textAnchor="middle" fontSize={14} fontWeight={700} fill="#1e40af">A</text>
-      <text x={B.x - 14} y={B.y + 6} textAnchor="middle" fontSize={14} fontWeight={700} fill="#1e40af">B</text>
-      <text x={C.x + 14} y={C.y + 6} textAnchor="middle" fontSize={14} fontWeight={700} fill="#1e40af">C</text>
+      <text x={A.x} y={A.y - 10} textAnchor="middle" fontSize={14} fontWeight={700} fill="#065f46">A</text>
+      <text x={B.x - 14} y={B.y + 6} textAnchor="middle" fontSize={14} fontWeight={700} fill="#065f46">B</text>
+      <text x={C.x + 14} y={C.y + 6} textAnchor="middle" fontSize={14} fontWeight={700} fill="#065f46">C</text>
 
       {/* 변 라벨 */}
       <text x={(B.x + C.x) / 2} y={B.y + 22} textAnchor="middle" fontSize={13} fontWeight={600} fill="#374151">a</text>
@@ -452,7 +452,7 @@ function CircleSvg() {
         y1={cy}
         x2={cx + r * Math.cos(Math.PI / 4)}
         y2={cy - r * Math.sin(Math.PI / 4)}
-        stroke="#3b82f6"
+        stroke="#059669"
         strokeWidth={2}
       />
 
@@ -466,7 +466,7 @@ function CircleSvg() {
         y={cy - r * Math.sin(Math.PI / 4) / 2 - 6}
         fontSize={14}
         fontWeight={700}
-        fill="#3b82f6"
+        fill="#059669"
       >
         r
       </text>
@@ -507,7 +507,7 @@ function BarChartSvg() {
   const chartLeft = 60;
   const chartBottom = 230;
   const chartHeight = 180;
-  const colors = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444'];
+  const colors = ['#059669', '#10b981', '#f59e0b', '#f43f5e', '#ef4444'];
 
   return (
     <svg
@@ -644,7 +644,7 @@ function LinearFunctionSvg() {
       <text x={ox - 12} y={oy + 14} textAnchor="end" fontSize={10} fill="#374151" fontWeight={600}>O</text>
 
       {/* 직선 y = 2x + 1 */}
-      <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#3b82f6" strokeWidth={2.5} />
+      <line x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y} stroke="#059669" strokeWidth={2.5} />
 
       {/* 기울기 삼각형 */}
       <line x1={slopeP1.x} y1={slopeP1.y} x2={slopeCorner.x} y2={slopeCorner.y} stroke="#ef4444" strokeWidth={1.5} strokeDasharray="4 2" />
@@ -661,7 +661,7 @@ function LinearFunctionSvg() {
       </text>
 
       {/* 수식 라벨 */}
-      <text x={p2.x + 8} y={p2.y - 4} fontSize={13} fontWeight={700} fill="#3b82f6">
+      <text x={p2.x + 8} y={p2.y - 4} fontSize={13} fontWeight={700} fill="#059669">
         y = 2x + 1
       </text>
 
@@ -703,9 +703,9 @@ function BalanceScaleSvg() {
       <line x1={100} y1={100} x2={140} y2={140} stroke="#6b7280" strokeWidth={1.5} />
 
       {/* 왼쪽 접시 */}
-      <ellipse cx={100} cy={145} rx={50} ry={10} fill="#dbeafe" stroke="#93c5fd" strokeWidth={1.5} />
-      <rect x={60} y={150} width={80} height={42} rx={8} fill="#eff6ff" stroke="#93c5fd" strokeWidth={1.5} />
-      <text x={100} y={176} textAnchor="middle" fontSize={18} fontWeight={700} fill="#1d4ed8">
+      <ellipse cx={100} cy={145} rx={50} ry={10} fill="#dbeafe" stroke="#6ee7b7" strokeWidth={1.5} />
+      <rect x={60} y={150} width={80} height={42} rx={8} fill="#eff6ff" stroke="#6ee7b7" strokeWidth={1.5} />
+      <text x={100} y={176} textAnchor="middle" fontSize={18} fontWeight={700} fill="#065f46">
         x + 3
       </text>
 

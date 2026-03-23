@@ -13,7 +13,7 @@ const ACTIVITY_CONFIG: Record<
 > = {
   lesson_complete: { icon: BookOpen, color: 'text-primary-600', bg: 'bg-primary-50' },
   quiz_complete: { icon: Trophy, color: 'text-success-500', bg: 'bg-success-50' },
-  badge_earned: { icon: Award, color: 'text-purple-500', bg: 'bg-purple-50' },
+  badge_earned: { icon: Award, color: 'text-rose-500', bg: 'bg-rose-50' },
   streak: { icon: Flame, color: 'text-orange-500', bg: 'bg-orange-50' },
 };
 

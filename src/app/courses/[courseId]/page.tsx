@@ -42,7 +42,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
     <div className="space-y-8">
       {/* 브레드크럼 */}
       <nav className="flex items-center gap-2 text-sm text-gray-400">
-        <Link href="/courses" className="hover:text-blue-600">
+        <Link href="/courses" className="hover:text-primary-600">
           강좌 목록
         </Link>
         <ChevronRight className="h-4 w-4" aria-hidden="true" />
@@ -76,7 +76,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
         <div className="px-6 py-4">
           <div className="mb-2 flex items-center justify-between text-sm">
             <span className="text-gray-500">학습 진행률</span>
-            <span className="font-bold text-blue-600">{progress}%</span>
+            <span className="font-bold text-primary-600">{progress}%</span>
           </div>
           <ProgressBar value={progress} />
         </div>
@@ -85,7 +85,7 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
       {/* 수업 목록 */}
       <section>
         <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
-          <BookOpen className="h-5 w-5 text-blue-500" aria-hidden="true" />
+          <BookOpen className="h-5 w-5 text-primary-500" aria-hidden="true" />
           수업 목록
         </h2>
 

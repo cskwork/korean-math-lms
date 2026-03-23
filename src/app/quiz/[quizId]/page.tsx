@@ -82,7 +82,7 @@ export default function QuizPage({ params }: QuizPageProps) {
   if (!quiz) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
-        <p className="text-5xl">🔍</p>
+        <p className="text-5xl text-gray-300" aria-hidden="true">?</p>
         <h1 className="mt-4 text-xl font-bold text-gray-900">
           퀴즈를 찾을 수 없습니다
         </h1>
@@ -91,7 +91,7 @@ export default function QuizPage({ params }: QuizPageProps) {
         </p>
         <Link
           href="/courses"
-          className="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+          className="mt-6 rounded-xl bg-primary-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-700"
         >
           강좌 목록으로 돌아가기
         </Link>
@@ -110,7 +110,7 @@ export default function QuizPage({ params }: QuizPageProps) {
   /** 브레드크럼 */
   const breadcrumb = (
     <nav className="flex flex-wrap items-center gap-2 text-sm text-gray-400">
-      <Link href="/courses" className="hover:text-blue-600 transition-colors">
+      <Link href="/courses" className="hover:text-primary-600 transition-colors">
         강좌
       </Link>
       {course && (
@@ -118,7 +118,7 @@ export default function QuizPage({ params }: QuizPageProps) {
           <ChevronRight className="h-4 w-4" aria-hidden="true" />
           <Link
             href={`/courses/${course.id}`}
-            className="hover:text-blue-600 transition-colors"
+            className="hover:text-primary-600 transition-colors"
           >
             {course.title}
           </Link>
@@ -179,7 +179,7 @@ export default function QuizPage({ params }: QuizPageProps) {
           </div>
           <div className="relative h-3 overflow-hidden rounded-full bg-gray-100">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 transition-all duration-500 ease-out"
+              className="h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-700 transition-all duration-500 ease-out"
               style={{ width: `${progressPercent}%` }}
             />
             {/* 쉬머 오버레이 */}
@@ -221,7 +221,7 @@ export default function QuizPage({ params }: QuizPageProps) {
                 className={cn(
                   'flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold transition-all duration-200',
                   isActive
-                    ? 'bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-md scale-110'
+                    ? 'bg-gradient-to-br from-primary-500 to-primary-700 text-white shadow-md scale-110'
                     : isDone
                       ? isQuestionCorrect
                         ? 'bg-green-100 text-green-700 ring-1 ring-green-300 hover:ring-2'
@@ -249,7 +249,7 @@ export default function QuizPage({ params }: QuizPageProps) {
           <button
             type="button"
             onClick={handleShowResult}
-            className="animate-scale-in animate-pulse-glow rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3 text-sm font-bold text-white shadow-lg transition-all hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl"
+            className="animate-scale-in animate-pulse-glow rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 px-7 py-3 text-sm font-bold text-white shadow-lg transition-all hover:from-primary-700 hover:to-primary-800 hover:shadow-xl"
           >
             결과 확인하기
           </button>

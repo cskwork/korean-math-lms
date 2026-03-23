@@ -10,9 +10,9 @@ export function Card({ className, children, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        'rounded-2xl border border-gray-100/80 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_12px_rgba(59,130,246,0.04)]',
-        'transition-all duration-300 ease-out',
-        'hover:shadow-[0_8px_30px_rgba(59,130,246,0.08),0_4px_12px_rgba(0,0,0,0.04)] hover:-translate-y-0.5',
+        'rounded-2xl border border-gray-100/80 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_12px_rgba(0,0,0,0.02)]',
+        'transition-all duration-500 ease-premium',
+        'hover:shadow-[0_8px_30px_rgba(16,185,129,0.06),0_4px_12px_rgba(0,0,0,0.03)] hover:-translate-y-0.5',
         className,
       )}
       {...props}

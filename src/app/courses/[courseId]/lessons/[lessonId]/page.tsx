@@ -27,7 +27,7 @@ export default function LessonPage({ params }: LessonPageProps) {
   if (!course || !lesson || lesson.courseId !== courseId) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
-        <p className="text-5xl">📭</p>
+        <p className="text-5xl" aria-hidden="true">?</p>
         <h1 className="mt-4 text-xl font-bold text-gray-900">
           수업을 찾을 수 없습니다
         </h1>
@@ -36,7 +36,7 @@ export default function LessonPage({ params }: LessonPageProps) {
         </p>
         <Link
           href={`/courses/${courseId}`}
-          className="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+          className="mt-6 rounded-lg bg-primary-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-700"
         >
           강좌로 돌아가기
         </Link>
@@ -56,13 +56,13 @@ export default function LessonPage({ params }: LessonPageProps) {
     <div className="space-y-6">
       {/* 브레드크럼 */}
       <nav className="flex flex-wrap items-center gap-2 text-sm text-gray-400">
-        <Link href="/courses" className="hover:text-blue-600">
+        <Link href="/courses" className="hover:text-primary-600">
           강좌
         </Link>
         <ChevronRight className="h-4 w-4" aria-hidden="true" />
         <Link
           href={`/courses/${courseId}`}
-          className="hover:text-blue-600"
+          className="hover:text-primary-600"
         >
           {course.title}
         </Link>

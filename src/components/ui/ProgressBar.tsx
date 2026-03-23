@@ -47,7 +47,7 @@ export function ProgressBar({
           className={cn(
             'relative rounded-full transition-all duration-700 ease-out',
             height,
-            color ?? 'bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600',
+            color ?? 'bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600',
           )}
           style={{ width: `${clamped}%` }}
         >

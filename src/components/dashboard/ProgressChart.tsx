@@ -19,13 +19,13 @@ export function ProgressChart({ weeklyXp }: ProgressChartProps) {
       <CardHeader>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-400 to-blue-600">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-400 to-primary-600">
               <BarChart3 className="h-4 w-4 text-white" aria-hidden="true" />
             </div>
             <h3 className="text-base font-semibold text-gray-900">주간 학습 현황</h3>
           </div>
-          <div className="flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1">
-            <span className="text-xs font-medium text-blue-600">총 {totalXp} XP</span>
+          <div className="flex items-center gap-1.5 rounded-full bg-primary-50 px-3 py-1">
+            <span className="text-xs font-medium text-primary-600">총 {totalXp} XP</span>
           </div>
         </div>
       </CardHeader>
@@ -76,12 +76,12 @@ export function ProgressChart({ weeklyXp }: ProgressChartProps) {
                     className={cn(
                       'relative w-full max-w-[36px] overflow-hidden rounded-t-lg transition-all duration-700 ease-out',
                       xp > 0 ? '' : 'bg-gray-50',
-                      isToday && xp > 0 ? 'ring-2 ring-blue-300/40 ring-offset-1' : '',
+                      isToday && xp > 0 ? 'ring-2 ring-primary-300/40 ring-offset-1' : '',
                     )}
                     style={{
                       height: `${Math.max(heightPercent, 4)}%`,
                       background: xp > 0
-                        ? `linear-gradient(to top, #2563eb, #60a5fa)`
+                        ? `linear-gradient(to top, #059669, #34d399)`
                         : undefined,
                     }}
                     aria-hidden="true"
@@ -96,12 +96,12 @@ export function ProgressChart({ weeklyXp }: ProgressChartProps) {
                   <span
                     className={cn(
                       'text-xs font-medium',
-                      isToday ? 'font-bold text-blue-600' : 'text-gray-400',
+                      isToday ? 'font-bold text-primary-600' : 'text-gray-400',
                     )}
                   >
                     {day}
                     {isToday && (
-                      <span className="ml-0.5 inline-block h-1 w-1 rounded-full bg-blue-500" />
+                      <span className="ml-0.5 inline-block h-1 w-1 rounded-full bg-primary-500" />
                     )}
                   </span>
                 </div>
